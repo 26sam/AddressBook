@@ -12,7 +12,7 @@ namespace AddressBook
                 warning = "Field cannot be empty";
                 return false;
             }
-            Regex regex = new Regex(@"^[\w ]+$");
+            Regex regex = new Regex(@"^[a-zA-Z ]+$");
             if(!regex.IsMatch(name))
             {
                 warning = "Invalid input. Name should only contain letters.";
