@@ -1,5 +1,6 @@
 ﻿
 using Logger;
+using System.Runtime.CompilerServices;
 
 namespace AddressBook
 {

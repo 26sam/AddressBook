@@ -1,12 +1,15 @@
 ﻿using System.Net.Mail;
+using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 
+[assembly : InternalsVisibleTo("AddressBookTest")]
 namespace AddressBook
 {
     internal static class Validate
     {
         internal static bool IsValidName(string name, out string warning)
         {
+            name = name.Trim(' ');
             if(name == string.Empty)
             {
                 warning = "Field cannot be empty";
